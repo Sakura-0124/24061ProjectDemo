@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Select</class>
+ <widget class="QWidget" name="Select">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">Select
+{
+
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>10</y>
+     <width>91</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>选择界面</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="toolButton_Infor">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>70</y>
+     <width>71</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#toolButton_Infor
+{
+	border-radius:35px;
+	background-color: rgb(255, 85, 0);
+}</string>
+   </property>
+   <property name="text">
+    <string>信息录入界面</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="toolButton_AtDa">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>130</y>
+     <width>71</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 170, 127);
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string>考勤数据界面</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="toolButton_IM">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>130</y>
+     <width>71</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 170, 127);
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string>信息管理界面</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="toolButton_Del">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>240</y>
+     <width>71</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 170, 255);
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string>员工删除界面</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="toolButton_Mod">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>240</y>
+     <width>71</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 170, 255);
+border-radius:35px;</string>
+   </property>
+   <property name="text">
+    <string>更改账号界面</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>150</y>
+     <width>111</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/Image/5l.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_back">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/Image/s.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>toolButton_AtDa</zorder>
+  <zorder>toolButton_Infor</zorder>
+  <zorder>toolButton_IM</zorder>
+  <zorder>toolButton_Del</zorder>
+  <zorder>toolButton_Mod</zorder>
+  <zorder>label_2</zorder>
+  <zorder>pushButton_back</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

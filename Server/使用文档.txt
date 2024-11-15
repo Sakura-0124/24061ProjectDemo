@@ -1,0 +1,13 @@
+服务器需要登录才能进入
+启动服务器后 新开一个终端窗口进行注册和登录
+要下载curl命令包
+
+sudo apt-get install curl
+
+注册
+
+curl -X POST -H "Content-Type: application/json" -d '{"action":"admin_register","username":"admin","password":"123456"}' http://localhost:8080
+
+登录
+
+curl -X POST -H "Content-Type: application/json" -d '{"action":"admin_login","username":"admin","password":"123456"}' http://localhost:8080

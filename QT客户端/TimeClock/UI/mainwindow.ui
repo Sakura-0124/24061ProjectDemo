@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>651</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#MainWindow
+{
+	
+	border-image: url(:/Image/1.png);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>70</y>
+      <width>400</width>
+      <height>400</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#stackedWidget
+{
+	
+	border-image: url(:/Image/10.png);
+}</string>
+    </property>
+    <widget class="Login" name="Log"/>
+    <widget class="Register" name="Reg"/>
+    <widget class="Information" name="Infor"/>
+    <widget class="Attendancedata" name="AtDa"/>
+    <widget class="Select" name="Sel"/>
+    <widget class="InformationManagement" name="IM"/>
+    <widget class="DeleteEmployee" name="Del"/>
+    <widget class="ModifyAccount" name="Mod"/>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>10</y>
+      <width>341</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>35</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 150, 255, 255), stop:0.125 rgba(79, 88, 233, 255), stop:0.267045 rgba(170, 255, 206, 255), stop:0.5 rgba(0, 98, 255, 255), stop:0.630682 rgba(89, 242, 223, 255), stop:0.772727 rgba(185, 255, 227, 255), stop:1 rgba(36, 219, 255, 255));</string>
+    </property>
+    <property name="text">
+     <string>智能打卡机</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>651</width>
+     <height>17</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Login</class>
+   <extends>QWidget</extends>
+   <header location="global">Login.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Register</class>
+   <extends>QWidget</extends>
+   <header location="global">Register.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Information</class>
+   <extends>QWidget</extends>
+   <header location="global">Information.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Attendancedata</class>
+   <extends>QWidget</extends>
+   <header location="global">Attendancedata.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Select</class>
+   <extends>QWidget</extends>
+   <header location="global">Select.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>InformationManagement</class>
+   <extends>QWidget</extends>
+   <header location="global">InformationManagement.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>DeleteEmployee</class>
+   <extends>QWidget</extends>
+   <header location="global">DeleteEmployee.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ModifyAccount</class>
+   <extends>QWidget</extends>
+   <header location="global">modifyaccount.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
