@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -31,6 +32,11 @@ public:
     QLabel *fingerprintStatusLabel;
     QPushButton *fingerprintButton;
     QPushButton *exportButton;
+    QLineEdit *portNameEdit;
+    QPushButton *openButton;
+    QPushButton *sendButton;
+    QPushButton *closeButton;
+    QLineEdit *dataEdit;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -38,7 +44,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(630, 390);
+        MainWindow->resize(630, 467);
         MainWindow->setStyleSheet(QString::fromUtf8("#MainWindow\n"
 "{\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(225, 240, 255, 255), stop:0.497512 rgba(221, 243, 228, 255), stop:1 rgba(255, 229, 230, 255));\n"
@@ -92,6 +98,54 @@ public:
 "	background-color: rgba(225, 240, 255,125);\n"
 "	font: 57 15pt \"\350\213\271\346\226\271UI-\346\270\257\";\n"
 "}"));
+        portNameEdit = new QLineEdit(centralwidget);
+        portNameEdit->setObjectName(QString::fromUtf8("portNameEdit"));
+        portNameEdit->setGeometry(QRect(0, 340, 151, 71));
+        portNameEdit->setStyleSheet(QString::fromUtf8("#portNameEdit\n"
+"{\n"
+"	border-radius:12px;\n"
+"	font: 57 15pt \"\350\213\271\346\226\271UI-\346\270\257\";\n"
+"	background-color: rgba(255, 255, 255,125);\n"
+"}"));
+        openButton = new QPushButton(centralwidget);
+        openButton->setObjectName(QString::fromUtf8("openButton"));
+        openButton->setGeometry(QRect(330, 340, 93, 71));
+        openButton->setStyleSheet(QString::fromUtf8("#openButton\n"
+"{\n"
+"	border-radius:12px;\n"
+"	font: 57 15pt \"\350\213\271\346\226\271UI-\346\270\257\";\n"
+"	color: rgb(22, 121, 77);\n"
+"	background-color: rgba(221, 243, 228,125);\n"
+"}"));
+        sendButton = new QPushButton(centralwidget);
+        sendButton->setObjectName(QString::fromUtf8("sendButton"));
+        sendButton->setGeometry(QRect(530, 340, 93, 71));
+        sendButton->setStyleSheet(QString::fromUtf8("#sendButton\n"
+"{\n"
+"	border-radius:12px;\n"
+"	font: 57 15pt \"\350\213\271\346\226\271UI-\346\270\257\";\n"
+"	color: rgb(0, 145, 254);\n"
+"	background-color: rgba(225, 240, 255,125);\n"
+"}"));
+        closeButton = new QPushButton(centralwidget);
+        closeButton->setObjectName(QString::fromUtf8("closeButton"));
+        closeButton->setGeometry(QRect(430, 340, 93, 71));
+        closeButton->setStyleSheet(QString::fromUtf8("#closeButton\n"
+"{\n"
+"	border-radius:12px;\n"
+"	font: 57 15pt \"\350\213\271\346\226\271UI-\346\270\257\";\n"
+"	color: rgb(206, 42, 49);\n"
+"	background-color: rgba(255, 229, 230,125);\n"
+"}"));
+        dataEdit = new QLineEdit(centralwidget);
+        dataEdit->setObjectName(QString::fromUtf8("dataEdit"));
+        dataEdit->setGeometry(QRect(160, 340, 161, 71));
+        dataEdit->setStyleSheet(QString::fromUtf8("#dataEdit\n"
+"{\n"
+"	border-radius:12px;\n"
+"	font: 57 15pt \"\350\213\271\346\226\271UI-\346\270\257\";\n"
+"	background-color: rgba(255, 255, 255,125);\n"
+"}"));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -112,6 +166,9 @@ public:
         fingerprintStatusLabel->setText(QString());
         fingerprintButton->setText(QCoreApplication::translate("MainWindow", "\345\275\225\345\205\245\346\214\207\347\272\271", nullptr));
         exportButton->setText(QCoreApplication::translate("MainWindow", "\345\257\274\345\207\272\344\270\272Execl", nullptr));
+        openButton->setText(QCoreApplication::translate("MainWindow", "\346\211\223\345\274\200", nullptr));
+        sendButton->setText(QCoreApplication::translate("MainWindow", "\345\217\221\351\200\201", nullptr));
+        closeButton->setText(QCoreApplication::translate("MainWindow", "\345\205\263\351\227\255", nullptr));
     } // retranslateUi
 
 };

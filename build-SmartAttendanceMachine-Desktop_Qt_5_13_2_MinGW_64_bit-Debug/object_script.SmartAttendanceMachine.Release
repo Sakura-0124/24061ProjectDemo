@@ -1,0 +1,11 @@
+release/database.o
+release/employee.o
+release/fingerprintmanager.o
+release/main.o
+release/mainwindow.o
+release/serialporthandler.o
+release/qrc_images.o
+release/moc_database.o
+release/moc_fingerprintmanager.o
+release/moc_mainwindow.o
+release/moc_serialporthandler.o

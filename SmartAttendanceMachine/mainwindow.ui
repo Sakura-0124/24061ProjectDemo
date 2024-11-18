@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>630</width>
-    <height>390</height>
+    <height>467</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -121,6 +121,108 @@
     </property>
     <property name="text">
      <string>导出为Execl</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="portNameEdit">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>340</y>
+      <width>151</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#portNameEdit
+{
+	border-radius:12px;
+	font: 57 15pt &quot;苹方UI-港&quot;;
+	background-color: rgba(255, 255, 255,125);
+}</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="openButton">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>340</y>
+      <width>93</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#openButton
+{
+	border-radius:12px;
+	font: 57 15pt &quot;苹方UI-港&quot;;
+	color: rgb(22, 121, 77);
+	background-color: rgba(221, 243, 228,125);
+}</string>
+    </property>
+    <property name="text">
+     <string>打开</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sendButton">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>340</y>
+      <width>93</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#sendButton
+{
+	border-radius:12px;
+	font: 57 15pt &quot;苹方UI-港&quot;;
+	color: rgb(0, 145, 254);
+	background-color: rgba(225, 240, 255,125);
+}</string>
+    </property>
+    <property name="text">
+     <string>发送</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="closeButton">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>340</y>
+      <width>93</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#closeButton
+{
+	border-radius:12px;
+	font: 57 15pt &quot;苹方UI-港&quot;;
+	color: rgb(206, 42, 49);
+	background-color: rgba(255, 229, 230,125);
+}</string>
+    </property>
+    <property name="text">
+     <string>关闭</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="dataEdit">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>340</y>
+      <width>161</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#dataEdit
+{
+	border-radius:12px;
+	font: 57 15pt &quot;苹方UI-港&quot;;
+	background-color: rgba(255, 255, 255,125);
+}</string>
     </property>
    </widget>
   </widget>

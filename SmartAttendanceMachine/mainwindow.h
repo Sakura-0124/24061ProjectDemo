@@ -2,8 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QDebug>
 #include "database.h"
 #include "fingerprintmanager.h"
+#include "serialporthandler.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -21,10 +23,14 @@ private slots:
     void updateSignInInfo();
     void exportAttendanceData();
     void enrollFingerprint();
+    void onOpenButtonClicked();
+    void onCloseButtonClicked();
+    void onSendButtonClicked();
 
 private:
     Ui::MainWindow *ui;
     Database *database;                // 数据库对象
     FingerprintManager *fingerprint;   // 指纹管理对象
+    SerialPortHandler *serialHandler;  // 声明 serialHandler 作为成员变量
 };
 #endif // MAINWINDOW_H

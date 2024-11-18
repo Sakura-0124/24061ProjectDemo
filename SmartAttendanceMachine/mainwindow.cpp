@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
     , database(new Database(this))
     , fingerprint(new FingerprintManager(this))
+    , serialHandler(new SerialPortHandler(this))
 {
     ui->setupUi(this);
 
@@ -22,6 +23,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->exportButton, &QPushButton::clicked, this, &MainWindow::exportAttendanceData);
     // 指纹录入按钮槽连接
     connect(ui->fingerprintButton, &QPushButton::clicked, this, &MainWindow::enrollFingerprint);
+    // 连接按钮的点击信号到槽函数
+    connect(ui->openButton, &QPushButton::clicked, this, &MainWindow::onOpenButtonClicked);
+    connect(ui->closeButton, &QPushButton::clicked, this, &MainWindow::onCloseButtonClicked);
+    connect(ui->sendButton, &QPushButton::clicked, this, &MainWindow::onSendButtonClicked);
 }
 
 MainWindow::~MainWindow()
@@ -61,4 +66,22 @@ void MainWindow::enrollFingerprint()
     // 调用指纹录入管理模块
     fingerprint->startEnrollment();
     ui->fingerprintStatusLabel->setText("指纹录入中...");
+}
+
+void MainWindow::onOpenButtonClicked() {
+    QString portName = ui->portNameEdit->text();
+    if (portName.isEmpty()) {
+            qDebug() << "串口名为空，请输入有效的串口名。";
+            return;
+    }
+    serialHandler->openPort(portName);
+}
+
+void MainWindow::onCloseButtonClicked() {
+    serialHandler->closePort();
+}
+
+void MainWindow::onSendButtonClicked() {
+    QString data = ui->dataEdit->text();
+    serialHandler->sendData(data.toUtf8());
 }

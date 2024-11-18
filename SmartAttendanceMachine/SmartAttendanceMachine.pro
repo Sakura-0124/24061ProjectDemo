@@ -1,4 +1,4 @@
-QT       += core gui sql axcontainer
+QT       += core gui sql axcontainer serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -20,13 +20,15 @@ SOURCES += \
     employee.cpp \
     fingerprintmanager.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    serialporthandler.cpp
 
 HEADERS += \
     database.h \
     employee.h \
     fingerprintmanager.h \
-    mainwindow.h
+    mainwindow.h \
+    serialporthandler.h
 
 FORMS += \
     mainwindow.ui
