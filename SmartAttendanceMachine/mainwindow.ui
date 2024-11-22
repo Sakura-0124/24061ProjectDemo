@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>630</width>
-    <height>467</height>
+    <height>512</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -120,7 +120,7 @@
 }</string>
     </property>
     <property name="text">
-     <string>导出为Execl</string>
+     <string>导出为Excel</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="portNameEdit">
@@ -223,6 +223,29 @@
 	font: 57 15pt &quot;苹方UI-港&quot;;
 	background-color: rgba(255, 255, 255,125);
 }</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>420</y>
+      <width>261</width>
+      <height>61</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="voiceRecognitionButton">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>420</y>
+      <width>171</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
     </property>
    </widget>
   </widget>

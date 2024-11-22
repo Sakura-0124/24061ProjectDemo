@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "AttendanceQueryDialog.h"
 #include <QTimer>
 #include <QMessageBox>
 #include <QStandardItemModel>  // 添加 QStandardItemModel 头文件
@@ -27,6 +28,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->openButton, &QPushButton::clicked, this, &MainWindow::onOpenButtonClicked);
     connect(ui->closeButton, &QPushButton::clicked, this, &MainWindow::onCloseButtonClicked);
     connect(ui->sendButton, &QPushButton::clicked, this, &MainWindow::onSendButtonClicked);
+    connect(ui->voiceRecognitionButton, &QPushButton::clicked, this, &MainWindow::on_voiceRecognitionButton_clicked);
 }
 
 MainWindow::~MainWindow()
@@ -53,7 +55,7 @@ void MainWindow::updateSignInInfo()
 
 void MainWindow::exportAttendanceData()
 {
-    // 导出考勤数据到Excel
+    // 导出考勤数据为Excel
     if (database->exportToExcel()) {
         QMessageBox::information(this, "导出成功", "考勤数据已成功导出！");
     } else {
@@ -84,4 +86,35 @@ void MainWindow::onCloseButtonClicked() {
 void MainWindow::onSendButtonClicked() {
     QString data = ui->dataEdit->text();
     serialHandler->sendData(data.toUtf8());
+}
+
+void MainWindow::on_voiceRecognitionButton_clicked()
+{
+    QProcess *process = new QProcess(this);
+    QString program = "python";
+    QStringList arguments;
+    arguments << "speech_recognition.py";
+
+    connect(process, &QProcess::readyReadStandardOutput, [process, this]() {
+        QString output = process->readAllStandardOutput().trimmed();
+        qDebug() << "Python recognition result:" << output;
+        handleVoiceCommand(output);
+    });
+
+    process->start(program, arguments);
+}
+
+void MainWindow::handleVoiceCommand(const QString &command)
+{
+    if (command.contains("显示员工考勤")) {
+        qDebug() << "执行显示员工考勤逻辑";
+        // TODO: 在此处实现员工考勤显示逻辑
+        ui->textBrowser->setText("显示某个员工的考勤信息...");
+    } else if (command.contains("退出")) {
+        qDebug() << "执行退出程序逻辑";
+        close();  // 关闭程序
+    } else {
+        qDebug() << "未识别的命令: " << command;
+        ui->textBrowser->setText("无法识别的命令，请重试。");
+    }
 }

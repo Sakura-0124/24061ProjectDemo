@@ -254,9 +254,11 @@ Makefile: ../SmartAttendanceMachine/SmartAttendanceMachine.pro ../../Qt/Qt5.13.2
 		../../Qt/Qt5.13.2/5.13.2/mingw73_64/lib/Qt5AxContainer.prl \
 		../../Qt/Qt5.13.2/5.13.2/mingw73_64/lib/Qt5AxBase.prl \
 		../../Qt/Qt5.13.2/5.13.2/mingw73_64/lib/Qt5Widgets.prl \
+		../../Qt/Qt5.13.2/5.13.2/mingw73_64/lib/Qt5Multimedia.prl \
 		../../Qt/Qt5.13.2/5.13.2/mingw73_64/lib/Qt5Gui.prl \
 		../../Qt/Qt5.13.2/5.13.2/mingw73_64/lib/Qt5Sql.prl \
 		../../Qt/Qt5.13.2/5.13.2/mingw73_64/lib/Qt5SerialPort.prl \
+		../../Qt/Qt5.13.2/5.13.2/mingw73_64/lib/Qt5Network.prl \
 		../../Qt/Qt5.13.2/5.13.2/mingw73_64/lib/Qt5Core.prl \
 		../../Qt/Qt5.13.2/5.13.2/mingw73_64/lib/qtmain.prl
 	$(QMAKE) -o Makefile ../SmartAttendanceMachine/SmartAttendanceMachine.pro -spec win32-g++ CONFIG+=debug CONFIG+=qml_debug
@@ -451,9 +453,11 @@ Makefile: ../SmartAttendanceMachine/SmartAttendanceMachine.pro ../../Qt/Qt5.13.2
 ../../Qt/Qt5.13.2/5.13.2/mingw73_64/lib/Qt5AxContainer.prl:
 ../../Qt/Qt5.13.2/5.13.2/mingw73_64/lib/Qt5AxBase.prl:
 ../../Qt/Qt5.13.2/5.13.2/mingw73_64/lib/Qt5Widgets.prl:
+../../Qt/Qt5.13.2/5.13.2/mingw73_64/lib/Qt5Multimedia.prl:
 ../../Qt/Qt5.13.2/5.13.2/mingw73_64/lib/Qt5Gui.prl:
 ../../Qt/Qt5.13.2/5.13.2/mingw73_64/lib/Qt5Sql.prl:
 ../../Qt/Qt5.13.2/5.13.2/mingw73_64/lib/Qt5SerialPort.prl:
+../../Qt/Qt5.13.2/5.13.2/mingw73_64/lib/Qt5Network.prl:
 ../../Qt/Qt5.13.2/5.13.2/mingw73_64/lib/Qt5Core.prl:
 ../../Qt/Qt5.13.2/5.13.2/mingw73_64/lib/qtmain.prl:
 qmake: FORCE

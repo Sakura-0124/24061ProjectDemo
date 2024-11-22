@@ -19,6 +19,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTableView>
+#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -37,6 +38,8 @@ public:
     QPushButton *sendButton;
     QPushButton *closeButton;
     QLineEdit *dataEdit;
+    QTextBrowser *textBrowser;
+    QPushButton *voiceRecognitionButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -44,7 +47,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(630, 467);
+        MainWindow->resize(630, 512);
         MainWindow->setStyleSheet(QString::fromUtf8("#MainWindow\n"
 "{\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(225, 240, 255, 255), stop:0.497512 rgba(221, 243, 228, 255), stop:1 rgba(255, 229, 230, 255));\n"
@@ -146,6 +149,12 @@ public:
 "	font: 57 15pt \"\350\213\271\346\226\271UI-\346\270\257\";\n"
 "	background-color: rgba(255, 255, 255,125);\n"
 "}"));
+        textBrowser = new QTextBrowser(centralwidget);
+        textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
+        textBrowser->setGeometry(QRect(0, 420, 261, 61));
+        voiceRecognitionButton = new QPushButton(centralwidget);
+        voiceRecognitionButton->setObjectName(QString::fromUtf8("voiceRecognitionButton"));
+        voiceRecognitionButton->setGeometry(QRect(270, 420, 171, 61));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -165,10 +174,11 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         fingerprintStatusLabel->setText(QString());
         fingerprintButton->setText(QCoreApplication::translate("MainWindow", "\345\275\225\345\205\245\346\214\207\347\272\271", nullptr));
-        exportButton->setText(QCoreApplication::translate("MainWindow", "\345\257\274\345\207\272\344\270\272Execl", nullptr));
+        exportButton->setText(QCoreApplication::translate("MainWindow", "\345\257\274\345\207\272\344\270\272Excel", nullptr));
         openButton->setText(QCoreApplication::translate("MainWindow", "\346\211\223\345\274\200", nullptr));
         sendButton->setText(QCoreApplication::translate("MainWindow", "\345\217\221\351\200\201", nullptr));
         closeButton->setText(QCoreApplication::translate("MainWindow", "\345\205\263\351\227\255", nullptr));
+        voiceRecognitionButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
     } // retranslateUi
 
 };
